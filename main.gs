@@ -1,9 +1,12 @@
 // Change this to match the Locale settings in the sheet.
 const paramSeparator = ";";
 
+// List of sheets (as objects) in which to activate the script
+// EndingRow = -1 means "'til end of sheet"
+// For disjoined rows you have to  make new entry for each group of rows (as in Sheet 2).
 const sheetsOfInterest = [
     {
-        SheetName:"Útlagður kostnaður félaga",
+        SheetName:"Sheet 1",
         StartingRow:8,
         EndingRow:-1,
         Columns:[
@@ -20,7 +23,7 @@ const sheetsOfInterest = [
         ]
     },
     {
-        SheetName:"Reikningar til greiðslu",
+        SheetName:"Sheet 2",
         StartingRow:7,
         EndingRow:-1,
         Columns:[
@@ -37,19 +40,19 @@ const sheetsOfInterest = [
         ]
     },
     {
-        SheetName:"Reikningar til greiðslu",
+        SheetName:"Sheet 2",
         StartingRow:1,
         EndingRow:1,
         Columns:[
             {
                 Index:12,
-                Format:"\"Síðast uppfært: \"d.m.yyyy",
+                Format:"\"Last updated: \"d.m.yyyy",
                 Align:"left"
             }
         ]
     },
     {
-        SheetName:"Niðurfellingar",
+        SheetName:"Sheet 3",
         StartingRow:2,
         EndingRow:-1,
         Columns:[
